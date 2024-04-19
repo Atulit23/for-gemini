@@ -66,13 +66,13 @@ app.use(cors());
 app.post("/generate", async (req, res) => {
   const query = req.body;
 
-  const result = await model.generateContent(query.prompt);
+  const result = await model.generateContent('You are an experienced psychologist who is kind, compassionate and caring and you would help user with their mental issues. Reply as how a psychatarist will talk to her clients. Remove asterisk from the answer. Answer in 100 words.' + query.prompt);
 
   const response = await result.response;
   const text = response.text();
 
   console.log(text);
-  res.send({ gen_response: 'You are an experienced psychologist who is kind, compassionate and caring and you would help user with their mental issues. Reply as how a psychatarist will talk to her clients. Remove asterisk from the answer' + text });
+  res.send({ gen_response: text });
 });
 
 app.get('/', (req, res) => {

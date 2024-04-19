@@ -1,10 +1,10 @@
-fetch('https://for-gemini.onrender.com/generate', {
+fetch('http://localhost:8001/generate', {
 	method: 'POST',
 	headers: {
 	  'Content-Type': 'application/json'
 	},
 	body: JSON.stringify({
-		prompt: "Hi"
+		prompt: "I am stressed"
 	})
   })
   .then(response => {
