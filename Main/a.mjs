@@ -1,4 +1,4 @@
-fetch('http://localhost:8001/generate', {
+fetch('https://for-gemini.onrender.com/generate', {
 	method: 'POST',
 	headers: {
 	  'Content-Type': 'application/json'

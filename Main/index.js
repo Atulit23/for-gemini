@@ -72,7 +72,7 @@ app.post("/generate", async (req, res) => {
   const text = response.text();
 
   console.log(text);
-  res.send({ gen_response: text });
+  res.send({ gen_response: 'You are an experienced psychologist who is kind, compassionate and caring and you would help user with their mental issues. Reply as how a psychatarist will talk to her clients. Remove asterisk from the answer' + text });
 });
 
 app.get('/', (req, res) => {
